@@ -1,51 +1,50 @@
-use reqwest::Client;
-use serde::{Deserialize, Serialize};
-use std::error::Error;
+mod audio;
+mod network;
 
-#[derive(Serialize, Deserialize, Clone, Debug)]
-struct Message {
-    role: String,
-    content: String,
-}
+use anyhow::{Context, Result};
+use audio::AudioRecorder;
+use network::AudioClient;
+use std::io::{self, Write};
+use std::{
+    io::stdout,
+    time::{Duration, Instant},
+};
 
-#[derive(Serialize)]
-struct OllamaChatRequest {
-    model: String,
-    messages: Vec<Message>, // 必须是数组
-    stream: bool,
-}
+fn main() -> anyhow::Result<()> {
+    // 1. 启动录音模块
+    // _recorder 必须在作用域内，否则 stream 会被析构导致录音停止
+    // 选择设备
+    let device = AudioRecorder::select_device()?;
+    let client = AudioClient::new("http://127.0.0.1:8081/voice/test");
+    println!(">>> 开始实时采集，按 Ctrl+C 停止...");
 
-#[derive(Deserialize, Debug)]
-struct OllamaChatResponse {
-    message: Message, // 注意：chat 接口返回的是 message 对象
-    done: bool,
-}
+    loop {
+        print!(">按回车键开始录音5s!");
+        io::stdout().flush();
+        let mut input = String::new();
+        io::stdin().read_line(&mut input)?;
 
-#[tokio::main]
-async fn main() -> Result<(), Box<dyn Error>> {
-    let client = Client::new();
-    let ollama_url = "http://localhost:11434/api/chat";
+        // 启动录音模块
+        let (_recorder, rx) = AudioRecorder::start(device.clone())?;
 
-    let user_input = "What's your name?";
+        println!(">>> 录音中...请说话，5秒后自动停止录音");
+        let start_time = Instant::now();
+        let record_duration = Duration::from_secs(5);
+        let mut buffer = Vec::new();
+        while start_time.elapsed() < record_duration {
+            if let Ok(samples) = rx.recv_timeout(Duration::from_millis(100)) {
+                buffer.extend(samples);
+            }
+        }
+        println!(
+            "录音结束，采集到 {} 个采样点。正在发送识别...",
+            buffer.len()
+        );
 
-    let request_body = OllamaChatRequest {
-        model: "qwen3:4b".to_string(),
-        messages: vec![Message {
-            role: "user".to_string(),
-            content: user_input.to_string(),
-        }],
-        stream: false,
-    };
-
-    println!("正在发送请求到 Ollama Chat API...");
-
-    let res = client.post(ollama_url).json(&request_body).send().await?;
-
-    if res.status().is_success() {
-        let response_json: OllamaChatResponse = res.json().await?;
-        println!("\nAssistant: {}", response_json.message.content);
-    } else {
-        println!("请求失败: {}", res.status());
+        match client.send_audio(buffer) {
+            Ok(res) => println!("识别结果: {}", res),
+            Err(e) => eprintln!("发送失败: {}", e),
+        }
     }
 
     Ok(())

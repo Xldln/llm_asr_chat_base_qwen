@@ -1,0 +1,30 @@
+2026-03-03 20:06:32.575 | INFO     | __main__:<module>:66 - 日志系统初始化完成
+2026-03-03 20:06:32.576 | INFO     | __main__:<module>:93 - 启动 FastAPI 服务...
+2026-03-03 20:06:32.749 | INFO     | uvicorn.server:_serve:92 - Started server process [1816]
+2026-03-03 20:06:32.750 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-03-03 20:06:32.750 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-03-03 20:06:32.751 | INFO     | uvicorn.server:_log_started_message:224 - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2026-03-03 20:20:24.146 | INFO     | uvicorn.server:shutdown:272 - Shutting down
+2026-03-03 20:20:24.262 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-03-03 20:20:24.264 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2026-03-03 20:20:24.266 | INFO     | uvicorn.server:_serve:102 - Finished server process [1816]
+2026-03-03 21:15:06.162 | INFO     | __main__:<module>:66 - 日志系统初始化完成
+2026-03-03 21:15:06.163 | INFO     | __main__:<module>:93 - 启动 FastAPI 服务...
+2026-03-03 21:15:06.245 | INFO     | uvicorn.server:_serve:92 - Started server process [424]
+2026-03-03 21:15:06.245 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-03-03 21:15:06.246 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-03-03 21:15:06.246 | INFO     | uvicorn.server:_log_started_message:224 - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2026-03-03 21:34:45.141 | INFO     | uvicorn.server:shutdown:272 - Shutting down
+2026-03-03 21:34:45.247 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-03-03 21:34:45.248 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2026-03-03 21:34:45.249 | INFO     | uvicorn.server:_serve:102 - Finished server process [424]
+2026-03-03 21:35:35.543 | INFO     | __main__:<module>:66 - 日志系统初始化完成
+2026-03-03 21:35:35.544 | INFO     | __main__:<module>:93 - 启动 FastAPI 服务...
+2026-03-03 21:35:35.616 | INFO     | uvicorn.server:_serve:92 - Started server process [3804]
+2026-03-03 21:35:35.617 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-03-03 21:35:35.617 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-03-03 21:35:35.618 | INFO     | uvicorn.server:_log_started_message:224 - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2026-03-03 21:36:02.565 | INFO     | uvicorn.server:shutdown:272 - Shutting down
+2026-03-03 21:36:02.671 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-03-03 21:36:02.672 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2026-03-03 21:36:02.673 | INFO     | uvicorn.server:_serve:102 - Finished server process [3804]

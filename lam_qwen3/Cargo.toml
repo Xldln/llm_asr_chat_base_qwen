@@ -6,7 +6,11 @@ edition = "2024"
 [dependencies]
 tokio = { version = "1", features = ["full"] }
 
-reqwest = { version = "0.11", features = ["json"] }
 
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
+reqwest = { version = "0.11", features = ["blocking", "json"] }
+
+cpal = "0.15"            # 跨平台音频后端
+crossbeam-channel = "0.5" 
+anyhow = "1.0"           
