@@ -5,7 +5,7 @@ import os
 import shutil
 from fastapi.responses import JSONResponse,FileResponse,PlainTextResponse,StreamingResponse
 import pandas as pd
-
+from services.voice_detect_services import VoiceDetectService
 import cv2
 import io
 import numpy as np
@@ -34,19 +34,29 @@ async def get_voice_result_test(request: Request):
     
 
 
-# @voice_router.post("/detect")
-# async def get_voice_detect_result(request: Request):
-#     # 1. 直接从内存读取二进制流（极快，无磁盘IO）
-#     body = await request.body()
+@voice_router.post("/detect")
+async def get_voice_detect_result(request: Request):
+    body = await request.body()
     
-#     # 2. 将 bytes 转回 numpy 数组
-#     # 注意：dtype 必须与 Rust 端发送的类型一致（f32 对应 float32）
-#     audio_np = np.frombuffer(body, dtype=np.float32)
+    # 2. 将 bytes 转回 numpy 数组
+    # 注意：dtype 必须与 Rust 端发送的类型一致（f32 对应 float32）
+    audio_np = np.frombuffer(body, dtype=np.float32)
     
-#     # 3. 直接喂给 Qwen-ASR 模型
-#     # 假设你已经定义好了 model 和采样率 SR
-#     # results = model.transcribe(
-#     #     audio=(audio_np, 16000), # 确保采样率匹配
-#     #     language=None
-#     # )
+    asr_service = VoiceDetectService("Qwen3-ASR-1.7B")
+
+    result_text = asr_service.transcribe(audio=audio_np)
+
+
+    return JSONResponse(content={"message": "音频转录成功",
+                                  "transcription": result_text,
+                                  "code": 200
+                                  }
+                                  )
+    
+    # 3. 直接喂给 Qwen-ASR 模型
+    # 假设你已经定义好了 model 和采样率 SR
+    # results = model.transcribe(
+    #     audio=(audio_np, 16000), # 确保采样率匹配
+    #     language=None
+    # )
     

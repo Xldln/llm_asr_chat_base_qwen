@@ -1,8 +1,10 @@
 mod audio;
+mod llm;
 mod network;
 
 use anyhow::{Context, Result};
 use audio::AudioRecorder;
+use llm::OllamaChat;
 use network::AudioClient;
 use std::io::{self, Write};
 use std::{
@@ -11,12 +13,25 @@ use std::{
 };
 
 fn main() -> anyhow::Result<()> {
+
+    
+    let chat_model = "qwen3:4b";
+    let mut ollama_chat = OllamaChat::new("http://127.0.0.1:11434", chat_model);
+
+    println!("连接 Ollama 中，正在测试对话接口...");
+    let question = "what's your name? and tell me a joke.";
+
+    match ollama_chat.chat_with_question(question) {
+        Ok(response) => println!("{} 回复: {}", chat_model, response.message.content),
+        Err(e) => eprintln!("{} 请求失败: {}", chat_model, e),
+    }
+
+    println!(">>> 开始实时采集，按 Ctrl+C 停止...");
     // 1. 启动录音模块
     // _recorder 必须在作用域内，否则 stream 会被析构导致录音停止
     // 选择设备
     let device = AudioRecorder::select_device()?;
     let client = AudioClient::new("http://127.0.0.1:8081/voice/test");
-    println!(">>> 开始实时采集，按 Ctrl+C 停止...");
 
     loop {
         print!(">按回车键开始录音5s!");

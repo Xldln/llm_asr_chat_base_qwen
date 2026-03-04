@@ -6,6 +6,7 @@ pub struct AudioClient {
     client: Client,
     url: String,
 }
+
 impl AudioClient {
     pub fn new(url: &str) -> Self {
         Self {
