@@ -6,7 +6,7 @@ import torchaudio
 
 # Load the model
 model = Qwen3TTSModel.from_pretrained(
-    "Qwen3-TTS-12Hz-0.6B-CustomVoice",
+    "./models/Qwen3-TTS-12Hz-0.6B-CustomVoice",
     device_map="cpu",
     dtype=torch.bfloat16,
     #attn_implementation="flash_attention_2",

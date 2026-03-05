@@ -5,7 +5,7 @@ import os
 import shutil
 from fastapi.responses import JSONResponse,FileResponse,PlainTextResponse,StreamingResponse
 import pandas as pd
-from services.voice_detect_services import VoiceDetectService
+from ..services.voice_detect_services import VoiceDetectService
 import cv2
 import io
 import numpy as np

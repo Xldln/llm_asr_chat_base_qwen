@@ -1,0 +1,402 @@
+2026-03-05 11:22:18.027 | INFO     | __main__:<module>:66 - 日志系统初始化完成
+2026-03-05 11:22:18.028 | INFO     | __main__:<module>:94 - 启动 FastAPI 服务...
+2026-03-05 11:22:18.636 | INFO     | uvicorn.server:_serve:92 - Started server process [28288]
+2026-03-05 11:22:18.636 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-03-05 11:22:18.637 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-03-05 11:22:18.637 | INFO     | uvicorn.server:_log_started_message:224 - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2026-03-05 12:53:29.187 | INFO     | uvicorn.server:shutdown:272 - Shutting down
+2026-03-05 12:53:29.303 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-03-05 12:53:29.303 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2026-03-05 12:53:29.309 | INFO     | uvicorn.server:_serve:102 - Finished server process [28288]
+2026-03-05 12:53:46.845 | INFO     | __main__:<module>:66 - 日志系统初始化完成
+2026-03-05 12:53:46.846 | INFO     | __main__:<module>:94 - 启动 FastAPI 服务...
+2026-03-05 12:53:46.899 | INFO     | uvicorn.server:_serve:92 - Started server process [28440]
+2026-03-05 12:53:46.900 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-03-05 12:53:46.900 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-03-05 12:53:46.901 | INFO     | uvicorn.server:_log_started_message:224 - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2026-03-05 12:58:54.500 | INFO     | uvicorn.server:shutdown:272 - Shutting down
+2026-03-05 12:58:54.604 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-03-05 12:58:54.605 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2026-03-05 12:58:54.605 | INFO     | uvicorn.server:_serve:102 - Finished server process [28440]
+2026-03-05 12:59:10.685 | INFO     | __main__:<module>:66 - 日志系统初始化完成
+2026-03-05 12:59:10.685 | INFO     | __main__:<module>:94 - 启动 FastAPI 服务...
+2026-03-05 12:59:10.737 | INFO     | uvicorn.server:_serve:92 - Started server process [22968]
+2026-03-05 12:59:10.737 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-03-05 12:59:10.737 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-03-05 12:59:10.737 | INFO     | uvicorn.server:_log_started_message:224 - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2026-03-05 13:12:07.894 | INFO     | uvicorn.server:shutdown:272 - Shutting down
+2026-03-05 13:12:07.998 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-03-05 13:12:07.998 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2026-03-05 13:12:07.998 | INFO     | uvicorn.server:_serve:102 - Finished server process [22968]
+2026-03-05 13:16:07.424 | INFO     | __main__:<module>:66 - 日志系统初始化完成
+2026-03-05 13:16:07.424 | INFO     | __main__:<module>:94 - 启动 FastAPI 服务...
+2026-03-05 13:16:07.479 | INFO     | uvicorn.server:_serve:92 - Started server process [11092]
+2026-03-05 13:16:07.479 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-03-05 13:16:07.479 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-03-05 13:16:07.479 | INFO     | uvicorn.server:_log_started_message:224 - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2026-03-05 13:16:43.699 | INFO     | __main__:write:56 - 加载 TTS 模型失败: Repo id must use alphanumeric chars, '-', '_' or '.'. The name cannot start or end with '-' or '.' and the maximum length is 96: 'D:\yy\code\github\llm_asr_chat_base_qwen\lam_qwen3\app\api\services\..\..\models\Qwen3-TTS-12Hz-0.6B-CustomVoice'.
+2026-03-05 13:16:43.701 | ERROR    | uvicorn.protocols.http.httptools_impl:run_asgi:421 - Exception in ASGI application
+
+Traceback (most recent call last):
+
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\transformers\utils\hub.py", line 479, in cached_files
+    hf_hub_download(
+    └ <function hf_hub_download at 0x000002102FAA2F20>
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\huggingface_hub\utils\_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+    │                └ 'D:\\yy\\code\\github\\llm_asr_chat_base_qwen\\lam_qwen3\\app\\api\\services\\..\\..\\models\\Qwen3-TTS-12Hz-0.6B-CustomVoice'
+    └ <function validate_repo_id at 0x000002102FA819E0>
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\huggingface_hub\utils\_validators.py", line 160, in validate_repo_id
+    raise HFValidationError(
+          └ <class 'huggingface_hub.errors.HFValidationError'>
+
+huggingface_hub.errors.HFValidationError: Repo id must use alphanumeric chars, '-', '_' or '.'. The name cannot start or end with '-' or '.' and the maximum length is 96: 'D:\yy\code\github\llm_asr_chat_base_qwen\lam_qwen3\app\api\services\..\..\models\Qwen3-TTS-12Hz-0.6B-CustomVoice'.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+
+  File "D:\yy\code\github\llm_asr_chat_base_qwen\lam_qwen3\app\main.py", line 95, in <module>
+    uvicorn.run(app, host="0.0.0.0", port=8081,
+    │       │   └ <fastapi.applications.FastAPI object at 0x000002106526D0A0>
+    │       └ <function run at 0x00000210896CA2A0>
+    └ <module 'uvicorn' from 'D:\\yy\\Anaconda\\envs\\qwen3-asr\\Lib\\site-packages\\uvicorn\\__init__.py'>
+
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\uvicorn\main.py", line 606, in run
+    server.run()
+    │      └ <function Server.run at 0x00000210896CA520>
+    └ <uvicorn.server.Server object at 0x00000210896EE480>
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\uvicorn\server.py", line 75, in run
+    return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+           │           │    │             │                      │    │      └ <function Config.get_loop_factory at 0x00000210896C9E40>
+           │           │    │             │                      │    └ <uvicorn.config.Config object at 0x00000210896C1B20>
+           │           │    │             │                      └ <uvicorn.server.Server object at 0x00000210896EE480>
+           │           │    │             └ None
+           │           │    └ <function Server.serve at 0x00000210896CA5C0>
+           │           └ <uvicorn.server.Server object at 0x00000210896EE480>
+           └ <function run at 0x00000210735D5EE0>
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\asyncio\runners.py", line 195, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Server.serve at 0x000002108972DFC0>
+           │      └ <function Runner.run at 0x00000210735F7740>
+           └ <asyncio.runners.Runner object at 0x000002108966AA20>
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Server.serve() running at D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\uvicorn\server.py...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x00000210735F5300>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x000002108966AA20>
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\asyncio\base_events.py", line 678, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x000002107369DF80>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\asyncio\windows_events.py", line 322, in run_forever
+    super().run_forever()
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\asyncio\base_events.py", line 645, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x00000210735F7060>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\asyncio\base_events.py", line 1999, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000002107355B6A0>
+    └ <Handle <_asyncio.TaskStepMethWrapper object at 0x000002108A7E5D50>()>
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <_asyncio.TaskStepMethWrapper object at 0x000002108A7E5D50>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <_asyncio.TaskStepMethWrapper object at 0x000002108A7E5D50>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <_asyncio.TaskStepMethWrapper object at 0x000002108A7E5D50>()>
+> File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+                   └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x0000021087864FB0>
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+                 │    │   │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002108A...
+                 │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+                 │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8081), 'cl...
+                 │    └ <fastapi.applications.FastAPI object at 0x000002106526D0A0>
+                 └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x0000021087864FB0>
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\fastapi\applications.py", line 1160, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002108A...
+                           │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+                           └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8081), 'cl...
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002108A...
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8081), 'cl...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x0000021088EC91F0>
+          └ <fastapi.applications.FastAPI object at 0x000002106526D0A0>
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000002108A7EA5C0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8081), 'cl...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x00000210896EE510>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x0000021088EC91F0>
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\starlette\middleware\cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000002108A7EA5C0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8081), 'cl...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x00000210897805C0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x00000210896EE510>
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000002108A7EA5C0>
+          │                            │    │    │     │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8081), 'cl...
+          │                            │    │    └ <starlette.requests.Request object at 0x000002108A7E5DF0>
+          │                            │    └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x0000021089780590>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x00000210897805C0>
+          └ <function wrap_app_handling_exceptions at 0x0000021074561620>
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002108A7EA840>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8081), 'cl...
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x0000021089780590>
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002108A7EA840>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8081), 'cl...
+          │    └ <fastapi.routing.APIRouter object at 0x0000021088C03AA0>
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x0000021089780590>
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002108A7EA840>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8081), 'cl...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x0000021088C03AA0>>
+          └ <fastapi.routing.APIRouter object at 0x0000021088C03AA0>
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002108A7EA840>
+          │     │      │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8081), 'cl...
+          │     └ <function Route.handle at 0x0000021074562B60>
+          └ APIRoute(path='/tts/transform', name='transform_text_to_speech', methods=['POST'])
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002108A7EA840>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8081), 'cl...
+          │    └ <function request_response.<locals>.app at 0x0000021089764E00>
+          └ APIRoute(path='/tts/transform', name='transform_text_to_speech', methods=['POST'])
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\fastapi\routing.py", line 130, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002108A7EA840>
+          │                            │    │        │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8081), 'cl...
+          │                            │    └ <starlette.requests.Request object at 0x000002108A7E5F70>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x000002108A7EA8E0>
+          └ <function wrap_app_handling_exceptions at 0x0000021074561620>
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002108A7EAA20>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8081), 'cl...
+          └ <function request_response.<locals>.app.<locals>.app at 0x000002108A7EA8E0>
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\fastapi\routing.py", line 116, in app
+    response = await f(request)
+                     │ └ <starlette.requests.Request object at 0x000002108A7E5F70>
+                     └ <function get_request_handler.<locals>.app at 0x0000021089764EA0>
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\fastapi\routing.py", line 670, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x0000021074580F40>
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\fastapi\routing.py", line 324, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {'request': TTSRequest(text='你好！我的中文名是**通义千问**，英文名是**Qwen**。我是通义实验室研发的超大规模语言模型，可以回答问题、创作文字、编程、表达观点等。有什么需要帮忙的吗？ 😊', instruct='...
+                 │         └ <function transform_text_to_speech at 0x00000210894AAFC0>
+                 └ Dependant(path_params=[], query_params=[], header_params=[], cookie_params=[], body_params=[ModelField(field_info=Body(Pydant...
+
+  File "D:\yy\code\github\llm_asr_chat_base_qwen\lam_qwen3\app\api\controller\transformer_audio_controller.py", line 25, in transform_text_to_speech
+    tts_service = TransformerAudioService()
+                  └ <class 'app.api.services.transformer_audio_services.TransformerAudioService'>
+
+  File "D:\yy\code\github\llm_asr_chat_base_qwen\lam_qwen3\app\api\services\transformer_audio_services.py", line 15, in __init__
+    self.tts_model = self.init_tts_model()
+    │                │    └ <function TransformerAudioService.init_tts_model at 0x00000210877A9E40>
+    │                └ <app.api.services.transformer_audio_services.TransformerAudioService object at 0x000002108A7E5A90>
+    └ <app.api.services.transformer_audio_services.TransformerAudioService object at 0x000002108A7E5A90>
+
+  File "D:\yy\code\github\llm_asr_chat_base_qwen\lam_qwen3\app\api\services\transformer_audio_services.py", line 29, in init_tts_model
+    raise e
+
+  File "D:\yy\code\github\llm_asr_chat_base_qwen\lam_qwen3\app\api\services\transformer_audio_services.py", line 21, in init_tts_model
+    model = Qwen3TTSModel.from_pretrained(
+            │             └ <classmethod(<function Qwen3TTSModel.from_pretrained at 0x000002108946A660>)>
+            └ <class 'qwen_tts.inference.qwen3_tts_model.Qwen3TTSModel'>
+
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\qwen_tts\inference\qwen3_tts_model.py", line 112, in from_pretrained
+    model = AutoModel.from_pretrained(pretrained_model_name_or_path, **kwargs)
+            │         │               │                                └ {'device_map': 'cpu', 'dtype': torch.bfloat16}
+            │         │               └ 'D:\\yy\\code\\github\\llm_asr_chat_base_qwen\\lam_qwen3\\app\\api\\services\\..\\..\\models\\Qwen3-TTS-12Hz-0.6B-CustomVoice'
+            │         └ <classmethod(<function _BaseAutoModelClass.from_pretrained at 0x0000021064DAF240>)>
+            └ <class 'transformers.models.auto.modeling_auto.AutoModel'>
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\transformers\models\auto\auto_factory.py", line 508, in from_pretrained
+    resolved_config_file = cached_file(
+                           └ <function cached_file at 0x0000021032616480>
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\transformers\utils\hub.py", line 322, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+           │                            │                           │            └ {'_raise_exceptions_for_gated_repo': False, '_raise_exceptions_for_missing_entries': False, '_raise_exceptions_for_connection...
+           │                            │                           └ 'config.json'
+           │                            └ 'D:\\yy\\code\\github\\llm_asr_chat_base_qwen\\lam_qwen3\\app\\api\\services\\..\\..\\models\\Qwen3-TTS-12Hz-0.6B-CustomVoice'
+           └ <function cached_files at 0x0000021032616520>
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\transformers\utils\hub.py", line 532, in cached_files
+    _get_cache_file_to_return(path_or_repo_id, filename, cache_dir, revision, repo_type)
+    │                         │                │         │          │         └ None
+    │                         │                │         │          └ None
+    │                         │                │         └ 'C:\\Users\\yubin.xu\\.cache\\huggingface\\hub'
+    │                         │                └ 'config.json'
+    │                         └ 'D:\\yy\\code\\github\\llm_asr_chat_base_qwen\\lam_qwen3\\app\\api\\services\\..\\..\\models\\Qwen3-TTS-12Hz-0.6B-CustomVoice'
+    └ <function _get_cache_file_to_return at 0x0000021032616020>
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\transformers\utils\hub.py", line 143, in _get_cache_file_to_return
+    resolved_file = try_to_load_from_cache(
+                    └ <function try_to_load_from_cache at 0x000002102FAA3100>
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\huggingface_hub\utils\_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+    │                └ 'D:\\yy\\code\\github\\llm_asr_chat_base_qwen\\lam_qwen3\\app\\api\\services\\..\\..\\models\\Qwen3-TTS-12Hz-0.6B-CustomVoice'
+    └ <function validate_repo_id at 0x000002102FA819E0>
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\huggingface_hub\utils\_validators.py", line 160, in validate_repo_id
+    raise HFValidationError(
+          └ <class 'huggingface_hub.errors.HFValidationError'>
+
+huggingface_hub.errors.HFValidationError: Repo id must use alphanumeric chars, '-', '_' or '.'. The name cannot start or end with '-' or '.' and the maximum length is 96: 'D:\yy\code\github\llm_asr_chat_base_qwen\lam_qwen3\app\api\services\..\..\models\Qwen3-TTS-12Hz-0.6B-CustomVoice'.
+2026-03-05 13:24:38.135 | INFO     | uvicorn.server:shutdown:272 - Shutting down
+2026-03-05 13:24:38.245 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-03-05 13:24:38.245 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2026-03-05 13:24:38.245 | INFO     | uvicorn.server:_serve:102 - Finished server process [11092]
+2026-03-05 13:25:21.372 | INFO     | __main__:<module>:66 - 日志系统初始化完成
+2026-03-05 13:25:21.388 | INFO     | __main__:<module>:94 - 启动 FastAPI 服务...
+2026-03-05 13:25:21.439 | INFO     | uvicorn.server:_serve:92 - Started server process [29620]
+2026-03-05 13:25:21.439 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-03-05 13:25:21.439 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-03-05 13:25:21.439 | INFO     | uvicorn.server:_log_started_message:224 - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2026-03-05 13:32:54.765 | INFO     | __main__:write:56 - 加载 TTS 模型失败: Repo id must use alphanumeric chars, '-', '_' or '.'. The name cannot start or end with '-' or '.' and the maximum length is 96: 'D:\yy\code\github\llm_asr_chat_base_qwen\lam_qwen3\app\api\services\..\..\models\Qwen3-TTS-12Hz-0.6B-CustomVoice'.
+2026-03-05 13:32:54.768 | INFO     | __main__:write:56 - TTS Error Log:
+Traceback (most recent call last):
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\transformers\utils\hub.py", line 479, in cached_files
+    hf_hub_download(
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\huggingface_hub\utils\_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\huggingface_hub\utils\_validators.py", line 160, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must use alphanumeric chars, '-', '_' or '.'. The name cannot start or end with '-' or '.' and the maximum length is 96: 'D:\yy\code\github\llm_asr_chat_base_qwen\lam_qwen3\app\api\services\..\..\models\Qwen3-TTS-12Hz-0.6B-CustomVoice'.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yy\code\github\llm_asr_chat_base_qwen\lam_qwen3\app\api\controller\transformer_audio_controller.py", line 25, in transform_text_to_speech
+    tts_service = TransformerAudioService()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\yy\code\github\llm_asr_chat_base_qwen\lam_qwen3\app\api\services\transformer_audio_services.py", line 15, in __init__
+    self.tts_model = self.init_tts_model()
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\yy\code\github\llm_asr_chat_base_qwen\lam_qwen3\app\api\services\transformer_audio_services.py", line 29, in init_tts_model
+    raise e
+  File "D:\yy\code\github\llm_asr_chat_base_qwen\lam_qwen3\app\api\services\transformer_audio_services.py", line 21, in init_tts_model
+    model = Qwen3TTSModel.from_pretrained(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\qwen_tts\inference\qwen3_tts_model.py", line 112, in from_pretrained
+    model = AutoModel.from_pretrained(pretrained_model_name_or_path, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\transformers\models\auto\auto_factory.py", line 508, in from_pretrained
+    resolved_config_file = cached_file(
+                           ^^^^^^^^^^^^
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\transformers\utils\hub.py", line 322, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\transformers\utils\hub.py", line 532, in cached_files
+    _get_cache_file_to_return(path_or_repo_id, filename, cache_dir, revision, repo_type)
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\transformers\utils\hub.py", line 143, in _get_cache_file_to_return
+    resolved_file = try_to_load_from_cache(
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\huggingface_hub\utils\_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\huggingface_hub\utils\_validators.py", line 160, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must use alphanumeric chars, '-', '_' or '.'. The name cannot start or end with '-' or '.' and the maximum length is 96: 'D:\yy\code\github\llm_asr_chat_base_qwen\lam_qwen3\app\api\services\..\..\models\Qwen3-TTS-12Hz-0.6B-CustomVoice'.
+2026-03-05 13:33:59.963 | INFO     | uvicorn.server:shutdown:272 - Shutting down
+2026-03-05 13:34:00.078 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-03-05 13:34:00.078 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2026-03-05 13:34:00.079 | INFO     | uvicorn.server:_serve:102 - Finished server process [29620]
+2026-03-05 13:34:16.912 | INFO     | __main__:<module>:66 - 日志系统初始化完成
+2026-03-05 13:34:16.912 | INFO     | __main__:<module>:94 - 启动 FastAPI 服务...
+2026-03-05 13:34:16.963 | INFO     | uvicorn.server:_serve:92 - Started server process [24640]
+2026-03-05 13:34:16.963 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-03-05 13:34:16.963 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-03-05 13:34:16.963 | INFO     | uvicorn.server:_log_started_message:224 - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2026-03-05 13:34:54.033 | INFO     | __main__:write:56 - 加载 TTS 模型失败: Repo id must use alphanumeric chars, '-', '_' or '.'. The name cannot start or end with '-' or '.' and the maximum length is 96: 'D:\yy\code\github\llm_asr_chat_base_qwen\lam_qwen3\app\api\services\..\..\..\models\Qwen3-TTS-12Hz-0.6B-CustomVoice'.
+2026-03-05 13:34:54.041 | INFO     | __main__:write:56 - TTS Error Log:
+Traceback (most recent call last):
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\transformers\utils\hub.py", line 479, in cached_files
+    hf_hub_download(
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\huggingface_hub\utils\_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\huggingface_hub\utils\_validators.py", line 160, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must use alphanumeric chars, '-', '_' or '.'. The name cannot start or end with '-' or '.' and the maximum length is 96: 'D:\yy\code\github\llm_asr_chat_base_qwen\lam_qwen3\app\api\services\..\..\..\models\Qwen3-TTS-12Hz-0.6B-CustomVoice'.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yy\code\github\llm_asr_chat_base_qwen\lam_qwen3\app\api\controller\transformer_audio_controller.py", line 25, in transform_text_to_speech
+    tts_service = TransformerAudioService()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\yy\code\github\llm_asr_chat_base_qwen\lam_qwen3\app\api\services\transformer_audio_services.py", line 15, in __init__
+    self.tts_model = self.init_tts_model()
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\yy\code\github\llm_asr_chat_base_qwen\lam_qwen3\app\api\services\transformer_audio_services.py", line 29, in init_tts_model
+    raise e
+  File "D:\yy\code\github\llm_asr_chat_base_qwen\lam_qwen3\app\api\services\transformer_audio_services.py", line 21, in init_tts_model
+    model = Qwen3TTSModel.from_pretrained(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\qwen_tts\inference\qwen3_tts_model.py", line 112, in from_pretrained
+    model = AutoModel.from_pretrained(pretrained_model_name_or_path, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\transformers\models\auto\auto_factory.py", line 508, in from_pretrained
+    resolved_config_file = cached_file(
+                           ^^^^^^^^^^^^
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\transformers\utils\hub.py", line 322, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\transformers\utils\hub.py", line 532, in cached_files
+    _get_cache_file_to_return(path_or_repo_id, filename, cache_dir, revision, repo_type)
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\transformers\utils\hub.py", line 143, in _get_cache_file_to_return
+    resolved_file = try_to_load_from_cache(
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\huggingface_hub\utils\_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "D:\yy\Anaconda\envs\qwen3-asr\Lib\site-packages\huggingface_hub\utils\_validators.py", line 160, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must use alphanumeric chars, '-', '_' or '.'. The name cannot start or end with '-' or '.' and the maximum length is 96: 'D:\yy\code\github\llm_asr_chat_base_qwen\lam_qwen3\app\api\services\..\..\..\models\Qwen3-TTS-12Hz-0.6B-CustomVoice'.
+2026-03-05 13:36:20.852 | INFO     | uvicorn.server:shutdown:272 - Shutting down
+2026-03-05 13:36:20.954 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-03-05 13:36:20.954 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2026-03-05 13:36:20.954 | INFO     | uvicorn.server:_serve:102 - Finished server process [24640]
+2026-03-05 13:36:37.853 | INFO     | __main__:<module>:66 - 日志系统初始化完成
+2026-03-05 13:36:37.853 | INFO     | __main__:<module>:94 - 启动 FastAPI 服务...
+2026-03-05 13:36:37.922 | INFO     | uvicorn.server:_serve:92 - Started server process [28172]
+2026-03-05 13:36:37.922 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-03-05 13:36:37.922 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-03-05 13:36:37.922 | INFO     | uvicorn.server:_log_started_message:224 - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2026-03-05 13:36:59.873 | INFO     | uvicorn.server:shutdown:272 - Shutting down
+2026-03-05 13:36:59.983 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2026-03-05 13:36:59.983 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2026-03-05 13:36:59.983 | INFO     | uvicorn.server:_serve:102 - Finished server process [28172]

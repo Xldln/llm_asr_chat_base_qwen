@@ -23,9 +23,12 @@ impl AudioClient {
             .into_iter()
             .flat_map(|sample| sample.to_le_bytes())
             .collect();
+
+        let audio_url = format!("{}/voice/detect", self.url);
+
         let response = self
             .client
-            .post(&self.url)
+            .post(&audio_url)
             .header("Content-Type", "application/octet-stream")
             .body(bytes)
             .send()

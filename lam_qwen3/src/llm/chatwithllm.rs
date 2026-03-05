@@ -54,6 +54,14 @@ impl OllamaChat {
 
         let ollama_url = format!("{}/api/chat", self.url);
 
+        println!("Sending request to Ollama at: {}", ollama_url);
+
+        let json_payload = serde_json::to_string_pretty(&request_body)?;
+        println!("--- Debug: 发送给 Ollama 的完整请求体 ---");
+        println!("{}", json_payload);
+        println!("---------------------------------------");
+
+
         let response = client
             .post(&ollama_url)
             .json(&request_body)

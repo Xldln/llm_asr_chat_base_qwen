@@ -68,6 +68,7 @@ logger.info("日志系统初始化完成")
 
 app = FastAPI()
 app.include_router(voice_router)
+app.include_router(tts_router)
 
 origins = [
     # 前端地址
