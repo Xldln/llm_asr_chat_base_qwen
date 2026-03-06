@@ -15,6 +15,9 @@ voice_router = APIRouter(
     tags=["Voice Detect API"]  # 文档分组标题
 )
 
+
+asr_service = VoiceDetectService("Qwen3-ASR-1.7B")
+
 @voice_router.post("/test")
 async def get_voice_result_test(request: Request):
     # 1. 直接从内存读取二进制流（极快，无磁盘IO）
@@ -42,7 +45,6 @@ async def get_voice_detect_result(request: Request):
     # 注意：dtype 必须与 Rust 端发送的类型一致（f32 对应 float32）
     audio_np = np.frombuffer(body, dtype=np.float32)
     
-    asr_service = VoiceDetectService("Qwen3-ASR-1.7B")
 
     result_text = asr_service.transcribe(audio=audio_np)
 

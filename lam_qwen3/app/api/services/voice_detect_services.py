@@ -2,22 +2,25 @@
 import torch 
 from qwen_asr import Qwen3ASRModel
 import os
-
+from pathlib import Path
 
 class VoiceDetectService:
 
     def __init__(self,model="Qwen3-ASR-1.7B",max_new_tokens=256):
 
-        self.asr_model_weights_path = os.path.join(os.path.dirname(__file__), "..", "..", "models")
+        self.asr_model_weights_path = Path(__file__).parent /".." / ".." / ".." / "models"
         self.asr_model = self.init_asr_model(model=model,max_new_tokens=max_new_tokens)
 
         
     def init_asr_model(self,device="cpu",model = "Qwen3-ASR-1.7B",max_new_tokens=256):
 
-        model_path = os.path.join(self.asr_model_weights_path, model)
+        model_path = (self.asr_model_weights_path / model).resolve()
+
+        model_path_str = str(model_path).replace("\\", "/")
+
         try:
             model = Qwen3ASRModel.from_pretrained(
-            model_path,
+            model_path_str,
             dtype=torch.bfloat16,
             device_map = device,
             # attn_implementation="flash_attention_2",

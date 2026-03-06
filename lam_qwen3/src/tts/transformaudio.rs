@@ -28,7 +28,7 @@ static RE_WHITESPACE: LazyLock<Regex> = LazyLock::new(|| Regex::new(r"\s+").unwr
 impl TransformAudioClient {
     pub fn new(url: &str) -> Self {
         let client: Client = Client::builder()
-            .timeout(Duration::from_secs(300))
+            .timeout(Duration::from_secs(600))
             .build()
             .unwrap();
         let url: String = url.to_string();

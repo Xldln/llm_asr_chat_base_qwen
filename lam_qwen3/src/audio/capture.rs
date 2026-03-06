@@ -1,7 +1,9 @@
-use anyhow::{Context, Result};
+use anyhow::{Context, Ok, Result};
+
 use cpal::traits::{DeviceTrait, HostTrait, StreamTrait};
 use crossbeam_channel::{Receiver, unbounded};
 use std::io::{self, Write};
+
 pub struct AudioRecorder {
     stream: cpal::Stream,
 }
@@ -43,8 +45,19 @@ impl AudioRecorder {
     pub fn select_device() -> Result<cpal::Device> {
         let host = cpal::default_host();
         let devices: Vec<cpal::Device> = host.input_devices()?.collect();
+
         if devices.is_empty() {
             return Err(anyhow::anyhow!("未发现任何输入设备"));
+        }
+        let target_name = "AB13X USB Audio";
+        for device in &devices {
+            // 使用全路径匹配，防止混淆
+            if let std::result::Result::Ok(name) = device.name() {
+                if name.contains(target_name) {
+                    println!("检测到 {}，正在自动选择该设备...", name);
+                    return Ok(device.clone()); // 这里的 Ok 是 anyhow 的包装
+                }
+            }
         }
         println!("\n=== 可用输入设备列表 ===");
         for (index, device) in devices.iter().enumerate() {
@@ -55,6 +68,7 @@ impl AudioRecorder {
                 device.name().unwrap_or_else(|_| "未知设备".into())
             );
         }
+
         // 2. 交互循环：直到用户输入正确的数字为止
         loop {
             print!("请输入设备编号 (1-{}): ", devices.len());
@@ -62,7 +76,7 @@ impl AudioRecorder {
             let mut input = String::new();
             io::stdin().read_line(&mut input).context("读取输入失败")?;
             match input.trim().parse::<usize>() {
-                Ok(num) if num > 0 && num <= devices.len() => {
+                std::result::Result::Ok(num) if num > 0 && num <= devices.len() => {
                     // 用户输入的是 1-based，转回 0-based 索引
                     let selected_device = devices.into_iter().nth(num - 1).unwrap();
                     println!("已选择设备: {}", selected_device.name()?);

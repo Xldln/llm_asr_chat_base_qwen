@@ -400,3 +400,23 @@ huggingface_hub.errors.HFValidationError: Repo id must use alphanumeric chars, '
 2026-03-05 13:36:59.983 | INFO     | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
 2026-03-05 13:36:59.983 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
 2026-03-05 13:36:59.983 | INFO     | uvicorn.server:_serve:102 - Finished server process [28172]
+2026-03-05 20:32:39.152 | INFO     | __main__:<module>:66 - 日志系统初始化完成
+2026-03-05 20:32:39.153 | INFO     | __main__:<module>:94 - 启动 FastAPI 服务...
+2026-03-05 20:32:39.295 | INFO     | uvicorn.server:_serve:92 - Started server process [29876]
+2026-03-05 20:32:39.295 | INFO     | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2026-03-05 20:32:39.295 | INFO     | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2026-03-05 20:32:39.296 | INFO     | uvicorn.server:_log_started_message:224 - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2026-03-05 20:34:57.636 | INFO     | qwen_tts.core.models.configuration_qwen3_tts:__init__:486 - speaker_encoder_config is None. Initializing talker model with default values
+2026-03-05 20:34:57.638 | INFO     | qwen_tts.core.models.configuration_qwen3_tts:__init__:483 - talker_config is None. Initializing talker model with default values
+2026-03-05 20:34:57.639 | INFO     | qwen_tts.core.models.configuration_qwen3_tts:__init__:486 - speaker_encoder_config is None. Initializing talker model with default values
+2026-03-05 20:34:57.639 | INFO     | qwen_tts.core.models.configuration_qwen3_tts:__init__:435 - code_predictor_config is None. Initializing code_predictor model with default values
+2026-03-05 20:34:57.640 | INFO     | qwen_tts.core.models.configuration_qwen3_tts:__init__:435 - code_predictor_config is None. Initializing code_predictor model with default values
+2026-03-05 20:34:57.768 | INFO     | qwen_tts.core.tokenizer_12hz.configuration_qwen3_tts_tokenizer_v2:__init__:157 - encoder_config is None. Initializing encoder with default values
+2026-03-05 20:34:57.768 | INFO     | qwen_tts.core.tokenizer_12hz.configuration_qwen3_tts_tokenizer_v2:__init__:160 - decoder_config is None. Initializing decoder with default values
+2026-03-05 20:34:59.037 | INFO     | qwen_tts.core.models.configuration_qwen3_tts:__init__:435 - code_predictor_config is None. Initializing code_predictor model with default values
+2026-03-05 20:46:16.142 | INFO     | __main__:write:56 - TTS Error Log:
+Traceback (most recent call last):
+  File "E:\Github\llm_asr_chat_base_qwen\lam_qwen3\app\api\controller\transformer_audio_controller.py", line 30, in transform_text_to_speech
+    audio_np = wavs_p[0].cpu().detach().numpy().flatten()
+               ^^^^^^^^^^^^^
+AttributeError: 'numpy.ndarray' object has no attribute 'cpu'

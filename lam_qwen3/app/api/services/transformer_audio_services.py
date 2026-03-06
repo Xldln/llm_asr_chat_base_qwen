@@ -11,7 +11,7 @@ class TransformerAudioService:
 
         self.language = language
         self.speaker = speaker
-        self.asr_model_weights_path = Path(__file__).parent/ ".." / ".." / ".." / "models"
+        self.asr_model_weights_path = Path(__file__).parent /".." / ".." / ".." / "models"
         self.tts_model = self.init_tts_model()
 
         
