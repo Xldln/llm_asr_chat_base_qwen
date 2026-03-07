@@ -31,7 +31,7 @@ fn main() -> anyhow::Result<()> {
     // 加载配置文件
     let config = Config::from_env();
 
-    let to_tts = true;
+    let to_tts = false; // 是否启用 TTS 功能，默认为 True
     // 初始化 OLLAMA连接
     let chat_model = "qwen3:4b";
     let mut ollama_chat = OllamaChat::new(&config.ollama_url, &chat_model);

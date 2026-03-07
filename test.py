@@ -12,7 +12,7 @@ if __name__ == '__main__':
     from qwen_asr import Qwen3ASRModel
 
     model = Qwen3ASRModel.from_pretrained(
-        "./models/Qwen3-ASR-1.7B",
+        "./lam_qwen3/models/Qwen3-ASR-1.7B",
         dtype=torch.bfloat16,
         device_map="cpu",
         # attn_implementation="flash_attention_2",
