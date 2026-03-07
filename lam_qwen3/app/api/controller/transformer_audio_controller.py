@@ -24,10 +24,9 @@ tts_service = TransformerAudioService()
 @tts_router.post("/transform")
 async def transform_text_to_speech(request: TTSRequest):
     try:
-        tts_service = TransformerAudioService()
 
         wavs_p, sr_p = tts_service.transform(request.text, request.instruct)
-        audio_np = wavs_p[0].cpu().detach().numpy().flatten()
+        audio_np = wavs_p[0].flatten()
 
         # 3. 使用 BytesIO 在内存中构建真正的 WAV 文件
         byte_io = io.BytesIO()

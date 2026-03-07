@@ -11,14 +11,14 @@ impl AudioClient {
     pub fn new(url: &str) -> Self {
         Self {
             client: Client::builder()
-                .timeout(Duration::from_secs(5))
+                .timeout(Duration::from_secs(30))
                 .build()
                 .unwrap(),
             url: url.to_string(),
         }
     }
 
-    pub fn send_audio(&self, samples: Vec<f32>) -> Result<String> {
+    pub fn send_audio(&self, samples: Vec<f32>, sample_rate: u32) -> Result<String> {
         let bytes: Vec<u8> = samples
             .into_iter()
             .flat_map(|sample| sample.to_le_bytes())
@@ -30,6 +30,7 @@ impl AudioClient {
             .client
             .post(&audio_url)
             .header("Content-Type", "application/octet-stream")
+            .header("X-Sample-Rate", sample_rate.to_string())
             .body(bytes)
             .send()
             .context("Failed to send request to Python backend")?;
